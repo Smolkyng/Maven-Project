@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Apr 18, 2016 3:42:08 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.mycompany.semestralkamaven.entity.Cestujuci" table="CESTUJUCI" schema="KOFI" optimistic-lock="version">
+        <composite-id name="id" class="com.mycompany.semestralkamaven.entity.CestujuciId">
+            <key-property name="rc" type="int">
+                <column name="RC" />
+            </key-property>
+            <key-property name="idLet" type="int">
+                <column name="ID_LET" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>
