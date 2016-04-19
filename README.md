@@ -1,2 +1,2 @@
 # Maven-Project
-Maven
+Simple Library project in java using Maven.
