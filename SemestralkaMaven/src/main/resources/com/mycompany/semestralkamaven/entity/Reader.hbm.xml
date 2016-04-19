@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Apr 19, 2016 1:14:29 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.mycompany.semestralkamaven.entity.Reader" table="READER" schema="K" optimistic-lock="version">
+        <id name="idReader" type="int">
+            <column name="ID_READER" />
+            <generator class="assigned" />
+        </id>
+        <property name="idPerson" type="int">
+            <column name="ID_PERSON" not-null="true" />
+        </property>
+        <property name="regFrom" type="date">
+            <column name="REG_FROM" length="10" not-null="true" />
+        </property>
+        <property name="regTo" type="date">
+            <column name="REG_TO" length="10" />
+        </property>
+    </class>
+</hibernate-mapping>

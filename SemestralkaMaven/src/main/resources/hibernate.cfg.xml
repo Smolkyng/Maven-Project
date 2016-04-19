@@ -4,14 +4,16 @@
   <session-factory>
     <property name="hibernate.dialect">org.hibernate.dialect.DerbyDialect</property>
     <property name="hibernate.connection.driver_class">org.apache.derby.jdbc.ClientDriver</property>
-    <property name="hibernate.connection.url">jdbc:derby://localhost:1527/Letisko</property>
-    <property name="hibernate.connection.username">kofi</property>
-    <property name="hibernate.connection.password">Guma2678</property>
-    <property name="hibernate.query.factory_class">org.hibernate.hql.internal.classic.ClassicQueryTranslatorFactory</property>
+    <property name="hibernate.connection.url">jdbc:derby://localhost:1527/Kniznica</property>
+    <property name="hibernate.connection.username">k</property>
+    <property name="hibernate.connection.password">k</property>
     <property name="hibernate.show_sql">true</property>
-    <mapping resource="com/mycompany/semestralkamaven/entity/Let.hbm.xml"/>
-    <mapping resource="com/mycompany/semestralkamaven/entity/Cestujuci.hbm.xml"/>
-    <mapping resource="com/mycompany/semestralkamaven/entity/Kapitan.hbm.xml"/>
-    <mapping resource="com/mycompany/semestralkamaven/entity/Osoba.hbm.xml"/>
+    <property name="hibernate.query.factory_class">org.hibernate.hql.internal.classic.ClassicQueryTranslatorFactory</property>
+    <mapping resource="com/mycompany/semestralkamaven/entity/Reader.hbm.xml"/>
+    <mapping resource="com/mycompany/semestralkamaven/entity/Person.hbm.xml"/>
+    <mapping resource="com/mycompany/semestralkamaven/entity/Book.hbm.xml"/>
+    <mapping resource="com/mycompany/semestralkamaven/entity/RentBook.hbm.xml"/>
+    <mapping resource="com/mycompany/semestralkamaven/entity/Title.hbm.xml"/>
+    <mapping resource="com/mycompany/semestralkamaven/entity/Author.hbm.xml"/>
   </session-factory>
 </hibernate-configuration>

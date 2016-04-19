@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Apr 19, 2016 1:14:29 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.mycompany.semestralkamaven.entity.RentBook" table="RENT_BOOK" schema="K" optimistic-lock="version">
+        <id name="idRentBook" type="int">
+            <column name="ID_RENT_BOOK" />
+            <generator class="assigned" />
+        </id>
+        <property name="idBook" type="int">
+            <column name="ID_BOOK" not-null="true" />
+        </property>
+        <property name="idReader" type="int">
+            <column name="ID_READER" not-null="true" />
+        </property>
+        <property name="rentFrom" type="date">
+            <column name="RENT_FROM" length="10" not-null="true" />
+        </property>
+        <property name="returnDate" type="date">
+            <column name="RETURN_DATE" length="10" />
+        </property>
+    </class>
+</hibernate-mapping>

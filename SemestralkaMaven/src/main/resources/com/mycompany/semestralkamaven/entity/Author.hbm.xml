@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Apr 19, 2016 1:14:29 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.mycompany.semestralkamaven.entity.Author" table="AUTHOR" schema="K" optimistic-lock="version">
+        <id name="idAuthor" type="int">
+            <column name="ID_AUTHOR" />
+            <generator class="assigned" />
+        </id>
+        <property name="authorName" type="string">
+            <column name="AUTHOR_NAME" length="30" />
+        </property>
+        <property name="authorSurname" type="string">
+            <column name="AUTHOR_SURNAME" length="30" />
+        </property>
+    </class>
+</hibernate-mapping>

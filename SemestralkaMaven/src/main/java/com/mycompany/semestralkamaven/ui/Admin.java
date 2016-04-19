@@ -27,8 +27,8 @@ public class Admin extends javax.swing.JFrame {
         initComponents();
     }
 
-    private static String QUERY_BASED_ON_FIRST_NAME = "from Osoba where meno like '";
-    private static String QUERY_BASED_ON_LAST_NAME = "from Osoba where priezvisko like '";
+    private static String QUERY_BASED_ON_FIRST_NAME = "from Person where person_name like '";
+    private static String QUERY_BASED_ON_LAST_NAME = "from Person where person_surname like '";
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -211,16 +211,16 @@ public class Admin extends javax.swing.JFrame {
     private void displayResult(List resultList) {
         Vector<String> tableHeaders = new Vector<String>();
         Vector tableData = new Vector();
-        tableHeaders.add("Rodné číslo");
+        tableHeaders.add("ID");
         tableHeaders.add("Meno");
         tableHeaders.add("Priezvisko");
 
-        for (Object o : resultList) {
-            Osoba osoba = (Osoba) o;
+        for (Object p : resultList) {
+            Person person = (Person) p;
             Vector<Object> oneRow = new Vector<Object>();
-            oneRow.add(osoba.getRc());
-            oneRow.add(osoba.getMeno());
-            oneRow.add(osoba.getPriezvisko());
+            oneRow.add(person.getIdOsoba());
+            oneRow.add(person.getPersonName());
+            oneRow.add(person.getPersonSurname());
             tableData.add(oneRow);
         }
         jTableOsoba.setModel(new DefaultTableModel(tableData, tableHeaders));
